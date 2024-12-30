@@ -7,19 +7,15 @@ struct Cli {
     /// The path to the file to read
     path:std::path::PathBuf,
 }
-fn main() {
+fn main() -> Result<(), Box<dyn std::error::Error>> {
    
    let args = Cli::parse();
    // rewrite using BufReader yes
    let content = std::fs::read_to_string(&args.path)?;
-//    let content = match result{
-//     Ok(content) => { content },
-//     Err(error) => {panic!("Cant deal with {}, just exit here",error);}
-//    };
-
    for line in content.lines() {
     if line.contains(&args.pattern) {
         println!("{}", line);
     }
    }
+   Ok(())
 }
