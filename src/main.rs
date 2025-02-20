@@ -1,15 +1,10 @@
-
-fn answer()-> i32 {
-    let x: i32 = 42;
-    x
-}
-
 fn main() {
-    let val = answer();
-    println!("{}",val)
+    let height = 12;
+    let width = 12;
+
+    println!("Area is {}",area(width,height));
 }
 
-#[test]
-fn check_validity() {
-    assert_eq!(answer(), 42)
+fn area(width:u32,height:u32) -> u32 {
+    width*height
 }
