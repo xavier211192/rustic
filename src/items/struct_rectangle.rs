@@ -1,4 +1,4 @@
-//derive trait to allow displaying struct
+//derive trait to allow displaying structs
 #[derive(Debug)]
 struct Rectangle {
     width:u32,
