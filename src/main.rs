@@ -30,3 +30,4 @@ fn main() {
     println!("{:#?}",rect1); //{:#7} to make it more readable
     println!("Area is {}",rect1.area());
     println!("Can rec1 hold rect 2? {}",rect1.can_hold(&rect2));
+}
